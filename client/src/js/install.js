@@ -13,8 +13,13 @@ butInstall.addEventListener('click', async () => {
     if(!askEvent) {
         return;
     }
-
+// this is showing the prompt
     askEvent.prompt();
+
+    // this is a way to reset the prompt so that it can only be used once instead of over and over
+    window.deferredPrompt = null;
+
+    butInstall.classList.toggle('hidden', true);
 });
 
 // TODO: Add an handler for the `appinstalled` event
