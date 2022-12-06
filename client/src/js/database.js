@@ -24,7 +24,11 @@ const transaction = jateDb.transaction('jate', 'readonly');
 
 const store = transaction.objectStore('jate');
 
-}
+const request = store.getAll();
+
+const result = await request;
+return result;
+};
 console.error('getDb not implemented');
 
 initdb();
