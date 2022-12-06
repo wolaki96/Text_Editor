@@ -46,5 +46,3 @@ registerRoute(
   })
 );
 
-// registerRoute();
-// offlineFallback();
