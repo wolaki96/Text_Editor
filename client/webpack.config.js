@@ -41,7 +41,13 @@ module.exports = () => {
             destination: path.join('assets', 'icons'),
           },
         ],
-      })
+      }),
+      //adding inject manifest
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
+
     ],
 
 
